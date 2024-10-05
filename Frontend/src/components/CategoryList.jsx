@@ -17,7 +17,7 @@ const categoryLoading = new Array(13).fill(null)
     fetchCategoryProduct()
   }, []);
   return(
-  <div className="container mx-auto px-4 mt-4">
+  <div className="container mx-auto px-4 my-4">
     <div className="flex items-center gap-4 justify-between overflow-scroll scrollbar-none">
       
       { loading?(

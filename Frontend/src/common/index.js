@@ -41,5 +41,9 @@ const SummaryApi = {
     url: `${SERVER_BASE_URL}/api/get-categoryProduct`,
     method: "get",
   },
+  categoryWiseProduct:{
+    url: `${SERVER_BASE_URL}/api/category-product`,
+    method: "post",
+  },
 };
 export default SummaryApi;

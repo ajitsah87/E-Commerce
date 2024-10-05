@@ -42,19 +42,19 @@ const BannerProduct = () => {
     return()=> clearInterval(interval)
   }, [currentImage]);
   return (
-    <div className="container mx-auto px-4 rounded overflow-hidden">
+    <div className="container mx-auto px-6  rounded overflow-hidden">
       <div className="h-60 md:h-96 w-full bg-red-500 relative">
         <div className="absolute z-10 size-full md:flex items-center hidden ">
-          <div className="flex justify-between w-full text-2xl">
+          <div className="flex justify-between w-full text-2xl p-2">
             <button
               onClick={prevImage}
-              className="rounded-full shadow-md bg-white p-1"
+              className="rounded-full shadow-md hover:bg-white bg-transparent transition-colors p-1"
             >
               <FaAngleLeft />
             </button>
             <button
               onClick={nextImage}
-              className="rounded-full shadow-md bg-white p-1"
+              className="rounded-full shadow-md hover:bg-white bg-transparent transition-colors p-1"
             >
               <FaAngleRight />
             </button>
