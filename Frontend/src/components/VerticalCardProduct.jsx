@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import fetchCategoryWiseProduct from "../helpers/fetchCategoryWiseProduct";
 import displayINRCurrency from "../helpers/displayCurrency";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
-import {motion} from "framer-motion"
-const HorizontalCardProduct = ({ category, heading }) => {
+import { motion } from "framer-motion";
+const VerticalCardProduct = ({ category, heading }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const loadingList = new Array(13).fill(null);
@@ -27,10 +27,9 @@ const HorizontalCardProduct = ({ category, heading }) => {
   return (
     <div className="relative container mx-auto my-4 px-6 ">
       <h2 className="text-lg font-semibold py-4 ">{heading}</h2>
-      <motion.div
-
-        className="flex items-center gap-4 md:gap-6 overflow-scroll scrollbar-none transition-all duration-300 ease-in-out"
-        style={{scrollBehavior: 'smooth'}}
+      <div
+        className="flex items-center gap-4 md:gap-6 overflow-x-scroll scrollbar-none transition-all duration-300 ease-in-out"
+        style={{ scrollBehavior: "smooth" }}
         ref={scrollElement}
       >
         <button
@@ -47,8 +46,8 @@ const HorizontalCardProduct = ({ category, heading }) => {
         </button>
         {data.map((product, index) => {
           return (
-            <div className="w-full max-w-[280px] min-w-[280px] md:min-w-[320px] h-36 bg-white rounded-sm shadow flex ">
-              <div className="bg-slate-200 h-full p-4 min-w-[120px] md:min-w-[145px]  ">
+            <div className="w-full max-w-[280px]  min-w-[280px] md:min-w-[320px] bg-white rounded-sm shadow  ">
+              <div className="bg-slate-200 h-32 p-4 min-w-[280px] md:min-w-[145px]  ">
                 <img
                   src={product.productImage[0]}
                   alt=""
@@ -77,9 +76,9 @@ const HorizontalCardProduct = ({ category, heading }) => {
             </div>
           );
         })}
-      </motion.div>
+      </div>
     </div>
   );
 };
 
-export default HorizontalCardProduct;
+export default VerticalCardProduct;

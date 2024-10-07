@@ -42,8 +42,8 @@ const BannerProduct = () => {
     return()=> clearInterval(interval)
   }, [currentImage]);
   return (
-    <div className="container mx-auto px-6  rounded overflow-hidden">
-      <div className="h-60 md:h-96 w-full bg-red-500 relative">
+    <div className="container mx-auto px-6  rounded overflow-hidden" >
+      <div className="h-60 md:h-96 w-full bg-red-500 relative" >
         <div className="absolute z-10 size-full md:flex items-center hidden ">
           <div className="flex justify-between w-full text-2xl p-2">
             <button
@@ -65,9 +65,10 @@ const BannerProduct = () => {
           {desktopImage.map((imageURL, index) => {
             return (
               <div
-                className="size-full min-w-full min-h-full transition-all "
+                className="size-full min-w-full min-h-full transition-all duration-500  "
                 style={{ transform: `translateX(-${currentImage * 100}%)` }}
                 key={imageURL}
+                
               >
                 <img src={imageURL} alt="" className="size-full" />
               </div>
