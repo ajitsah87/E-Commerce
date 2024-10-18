@@ -45,5 +45,9 @@ const SummaryApi = {
     url: `${SERVER_BASE_URL}/api/category-product`,
     method: "post",
   },
+  productDetails:{
+    url: `${SERVER_BASE_URL}/api/product-details`,
+    method: "post",
+  },
 };
 export default SummaryApi;

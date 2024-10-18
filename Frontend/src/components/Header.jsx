@@ -31,7 +31,7 @@ if (data.error) {
   console.log(user)
 
   return (
-    <header className="h-16 shadow-md bg-white">
+    <header className="h-16 shadow-md bg-white fixed w-full z-50">
      <div className="h-full container mx-auto flex items-center px-4 justify-between">
         <div>
            <Link to={"/"}>

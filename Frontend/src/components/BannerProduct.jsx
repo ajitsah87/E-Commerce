@@ -43,7 +43,7 @@ const BannerProduct = () => {
   }, [currentImage]);
   return (
     <div className="container mx-auto px-6  rounded overflow-hidden" >
-      <div className="h-60 md:h-96 w-full bg-red-500 relative" >
+      <div className="h-60 md:h-96 w-full bg-slate-200 relative" >
         <div className="absolute z-10 size-full md:flex items-center hidden ">
           <div className="flex justify-between w-full text-2xl p-2">
             <button
