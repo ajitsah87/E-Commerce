@@ -19,7 +19,7 @@ app.use(cors(
 ));
 
 app.use("/", (req, res) => {
-  res.send("server is running")
+  res.status(200).json("server is running")
 })
 
 app.use("/api", router)
