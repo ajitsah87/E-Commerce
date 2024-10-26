@@ -13,7 +13,7 @@ app.use(cookieParser())
 
 app.use(cors(
  {
-  origin : process.env.FRONTEND_URL,
+  origin : "https://ajit-e-com-frontend.vercel.app",
   credentials : true
  }
 ));
