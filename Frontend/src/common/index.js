@@ -1,5 +1,6 @@
-const SERVER_BASE_URL = "https://ajit-e-com-backend.vercel.app";
-
+const SERVER_BASE_URL = window.location.hostname === "localhost"
+    ? "http://localhost:8080"  
+    : "https://ajit-e-com-backend.vercel.app";
 const SummaryApi = {
   signUp: {
     url: `${SERVER_BASE_URL}/api/signup`,

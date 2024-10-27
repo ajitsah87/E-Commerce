@@ -10,13 +10,14 @@ const app = express();
 //neccessary middleware
 app.use(express.json())
 app.use(cookieParser())
+const FRONTEND_URL = process.env.NODE_ENV === "production"
+    ? "https://ajit-e-com-frontend.vercel.app"  
+    : process.env.FRONTEND_URL;                
 
-app.use(cors(
- {
-  origin : ["https://ajit-e-com-frontend.vercel.app"],
-  credentials : true
- }
-));
+app.use(cors({
+    origin: [FRONTEND_URL],
+    credentials: true
+}));
 
 // app.use("/", (req, res) => {
 //   res.status(200).json({message: "server is running"})
